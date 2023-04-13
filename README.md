@@ -7,6 +7,8 @@ Replication package for our work on "Taxing Collaborative Software Engineering"
 
 ## Requirements
 
+This replication package requires Python 3.10 or higher. Install the dependencies via
+
 ```
 python3 -m pip install -r requirements.txt
 ```
