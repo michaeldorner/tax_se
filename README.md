@@ -34,5 +34,15 @@ To list all options in detail, run
 python3 crawp.py --h
 ```
 
+### Step 2: Model pull requests as cross-border communication channels
+
+For this step, you will need a mapping of users and countries. This can be either a `dict` for a static mapping (do not capture changes in the users' location over time) or as dymnamic mapping as data frame monthly sampled (captures changes in the users' location over time). 
+
+Run `notebook.ipynb`. Look out for the instructions as inline comments. 
+
 ## License
+
+Copyright © 2023 Michael Dorner
+
+This work is licensed under [MIT license](LICENSE).
 
