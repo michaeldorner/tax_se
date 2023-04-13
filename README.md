@@ -1,8 +1,8 @@
 # Taxing Collaborative Software Engineering
 
-[![GitHub](https://img.shields.io/github/license/michaeldorner/only-time-will-tell)](./LICENSE)
+[![GitHub](https://img.shields.io/github/license/michaeldorner/tax_se)](./LICENSE)
 
-Replication package for the study "Upper Bound of Information Diffusion in Code Review"
+Replication package for our work on "Taxing Collaborative Software Engineering"
 
 ## Requirements
 
