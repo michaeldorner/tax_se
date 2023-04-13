@@ -19,7 +19,7 @@ python3 -m pip install orjson
 
 ### Step 1: Crawl 
 
-First, we collect all timelines from all pull requests at a GitHub instance. The crawler requires an `<api_token>` from GitHub and an `<out_dir>` where the results are stored into:
+First, we collect all timelines from all pull requests at a GitHub instance. The crawler requires an [`<api_token>` for your GitHub instance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and an `<out_dir>` where the results are stored into:
 ```
 python3 crawl.py <api_token> <out_dir>
 ```
