@@ -10,7 +10,7 @@ Replication package for our work on "Taxing Collaborative Software Engineering"
 python3 -m pip install -r requirements.txt
 ```
 
-For a faster loading, we recommend to optionally install orjson via pip:
+For a faster loading, we recommend to optionally install [`orjson`](https://github.com/ijl/orjson) via pip:
 ```
 python3 -m pip install orjson
 ```
