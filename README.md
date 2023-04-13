@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/michaeldorner/tax_se)](./LICENSE)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cca06dbbf55946b883129195e855ecd1)](https://app.codacy.com/gh/michaeldorner/tax_se/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-Replication package for our work on "Taxing Collaborative Software Engineering"
+Replication package for our work on "Taxing Collaborative Software Engineering".
 
 ## Requirements
 
@@ -40,8 +40,8 @@ python3 crawl.py --h
 ### Step 2: Model pull requests as cross-border communication channels
 
 For this step, you will need:
-1) the directory of the previously collected data and
-2) a mapping of users and countries. This can be either a `dict` for a static mapping (does not capture changes in the users' location over time) or a dataframe for time-dependent mapping as data frame monthly sampled (captures changes in the users' location over time). 
+1) The directory of the previously collected data; and,
+2) A mapping of users and countries. This can be either a `dict` for a static mapping (does not capture changes in the users' location over time) or a dataframe for time-dependent mapping as data frame monthly sampled (captures changes in the users' location over time). 
 
 Run [`notebook.ipynb`](notebook.ipynb). Look out for the instructions as inline comments. 
 
