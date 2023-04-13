@@ -1,1 +1,4 @@
-
+pandas
+tqdm
+requests
+requests_futures
