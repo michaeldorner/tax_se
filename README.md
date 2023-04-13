@@ -39,7 +39,7 @@ python3 crawp.py --h
 
 For this step, you will need a mapping of users and countries. This can be either a `dict` for a static mapping (does not capture changes in the users' location over time) or a dataframe for time-dependent mapping as data frame monthly sampled (captures changes in the users' location over time). 
 
-Run `notebook.ipynb`. Look out for the instructions as inline comments. 
+Run [`notebook.ipynb`](notebook.ipynb). Look out for the instructions as inline comments. 
 
 ## License
 
