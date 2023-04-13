@@ -7,7 +7,12 @@ Replication package for our work on "Taxing Collaborative Software Engineering"
 ## Requirements
 
 ```
-pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
+```
+
+For a faster initial loading of the communication network, you can optionally install orjson via pip:
+```
+python3 -m pip install orjson
 ```
 
 ## How to run
