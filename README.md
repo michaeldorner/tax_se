@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/michaeldorner/tax_se)](./LICENSE)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cca06dbbf55946b883129195e855ecd1)](https://app.codacy.com/gh/michaeldorner/tax_se/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-Replication package for our work on "Taxing Collaborative Software Engineering".
+Replication package for our work on "Taxing Collaborative Software Engineering"
 
 ## Requirements
 
