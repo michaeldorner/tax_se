@@ -39,7 +39,9 @@ python3 crawp.py --h
 
 ### Step 2: Model pull requests as cross-border communication channels
 
-For this step, you will need a mapping of users and countries. This can be either a `dict` for a static mapping (does not capture changes in the users' location over time) or a dataframe for time-dependent mapping as data frame monthly sampled (captures changes in the users' location over time). 
+For this step, you will need 
+1) the directory of the previously collected data and
+2) a mapping of users and countries. This can be either a `dict` for a static mapping (does not capture changes in the users' location over time) or a dataframe for time-dependent mapping as data frame monthly sampled (captures changes in the users' location over time). 
 
 Run [`notebook.ipynb`](notebook.ipynb). Look out for the instructions as inline comments. 
 
