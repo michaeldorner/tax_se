@@ -8,7 +8,11 @@ import bz2
 from concurrent.futures import as_completed
 from urllib.parse import urlparse, parse_qs
 
-import orjson
+try:
+    import orjson as json
+except ImportError:
+    import json
+
 from tqdm.auto import tqdm
 import requests
 from requests.adapters import HTTPAdapter, Retry
@@ -21,7 +25,7 @@ logging.basicConfig(filename=f'hamster_{datetime.now()}.log', encoding='utf-8', 
 def load(file_path: Path):
     with open(file_path, 'rb') as file_handle:
         byte_data = bz2.decompress(file_handle.read())
-        return orjson.loads(byte_data)
+        return json.loads(byte_data)
 
 def store(data, file_path: Path):
     def remove_keys(data, contains, equals):
@@ -32,7 +36,7 @@ def store(data, file_path: Path):
         return data
     (file_path.parent).mkdir(parents=True, exist_ok=True)
     cleaned_data = remove_keys(data, contains=['url', 'gravatar'], equals=['body', 'href', 'node_id', 'head', 'base', '_links', 'title', 'description'])
-    byte_data = orjson.dumps(cleaned_data)
+    byte_data = json.dumps(cleaned_data)
     byte_data = bz2.compress(byte_data)
     with open(file_path, 'wb') as file_handle:
         file_handle.write(byte_data)
@@ -48,7 +52,7 @@ class GitHubAPI:
         logging.info('HTTP status %i for %s', resp.status_code, resp.url)
         match resp.status_code:
             case 200:
-                return orjson.loads(resp.content)
+                return json.loads(resp.content)
             case 403:
                 if int(resp.headers.get('X-RateLimit-Remaining', 1)) > 0:
                     return []
