@@ -17,7 +17,7 @@ from tqdm.auto import tqdm
 import requests
 from requests.adapters import HTTPAdapter, Retry
 from requests_futures.sessions import FuturesSession
-
+from http import HTTPStatus
 
 logging.basicConfig(filename=f'hamster_{datetime.now()}.log', encoding='utf-8', level=logging.INFO)
 
@@ -51,13 +51,13 @@ class GitHubAPI:
     def read(cls, resp: requests.Response):
         logging.info('HTTP status %i for %s', resp.status_code, resp.url)
         match resp.status_code:
-            case 200:
+            case HTTPStatus.OK:
                 return json.loads(resp.content)
-            case 403:
+            case HTTPStatus.FORBIDDEN:
                 if int(resp.headers.get('X-RateLimit-Remaining', 1)) > 0:
                     return []
                 raise GitHubAPIError(f'{resp.status_code} for {resp.url}: {resp.text}')
-            case 404 | 500: # GitHub API is not bullet-proof
+            case HTTPStatus.NOT_FOUND | HTTPStatus.INTERNAL_SERVER_ERROR: # GitHub API is not bullet-proof
                 return []
             case _:
                 raise GitHubAPIError(f'{resp.status_code} for {resp.url}: {resp.text}')
