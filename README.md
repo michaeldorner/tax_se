@@ -26,7 +26,7 @@ First, we collect all timelines from all pull requests at a GitHub instance. [`c
 ```
 python3 crawl.py <api_token> <out_dir>
 ```
-[`crawler.py`](crawler.py) also provides the following optional command line arguments:
+[`crawl.py`](crawl.py) also provides the following optional command line arguments:
 - `--api_url` for the GitHub instance URL (default: `https://api.github.com`)
 - `--disable_cache` for disable caching (for larger instances not recommended)
 - `--num_workers` for parallel processes (default: 1)
